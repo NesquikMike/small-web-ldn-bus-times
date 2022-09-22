@@ -1,0 +1,30 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>London Bus Times</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <meta name="description" content="Small Web London Bus Times">
+  <meta property="og:title" content="London Bus Times">
+  <meta property="og:description" content="Small Web London Bus Times">
+  <meta property="og:image" content="/assets/image.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="{{ .uri }}">
+  <link rel="canonical" href="{{ .uri }}">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/my.webmanifest">
+  <meta name="theme-color" content="#D01A1E">
+</head>
+
+<body>
+{{ end }}
