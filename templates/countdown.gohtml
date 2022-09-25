@@ -1,0 +1,27 @@
+{{ template "header" . }}
+  <table style="width:100%">
+    <tr>
+      <th>Route</th>
+      <th>Destination</th>
+      <th>Arrival Time</th>
+      <th>License Plate</th>
+    </tr>
+  {{ range . }}
+    <tr>
+      <th>{{ .LineName }}</th>
+      <th>{{ .DestinationName }}</th>
+      <th>{{ .VehicleID }}</th>
+      <th>{{ .ExpectedArrival }}</th>
+    </tr>
+  {{ end }}
+  </table>
+  <br>
+  <br>
+  <h2>Enter 5 digit Bus Stop Code</h2>
+  <form action="/countdown" method="get">
+    <label for="stop-code">5 Digit Bus Stop Code:</label><br>
+    <input type="text" id="stop-code" name="stop-code"><br>
+    <input type="submit" value="Submit">
+  </form>
+  <p>This code can be found on bus stop stands above the bus timetables.</p>
+{{ template "footer" . }}
