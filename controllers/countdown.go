@@ -53,11 +53,16 @@ func (c Controller) Countdown(w http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
-	fmt.Println(incomingBusesToStop)
+	viewData := models.ViewData{
+		Uri: "",
+		IncomingBuses: incomingBusesToStop,
+	}
 
-	c.tpl.ExecuteTemplate(w, "countdown.gohtml", incomingBusesToStop)
+	c.tpl.ExecuteTemplate(w, "countdown.gohtml", viewData)
 }
 
 func (c Controller) Index(w http.ResponseWriter, req *http.Request) {
-	c.tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	viewData := models.ViewData{}
+
+	c.tpl.ExecuteTemplate(w, "index.gohtml", viewData)
 }

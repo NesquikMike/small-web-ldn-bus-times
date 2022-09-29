@@ -6,7 +6,7 @@
       <th>Arrival Time</th>
       <th>License Plate</th>
     </tr>
-  {{ range . }}
+  {{ range .IncomingBuses }}
     <tr>
       <th>{{ .LineName }}</th>
       <th>{{ .DestinationName }}</th>
